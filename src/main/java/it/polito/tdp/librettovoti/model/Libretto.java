@@ -15,6 +15,16 @@ public class Libretto {
 		this.voti.add(v);
 	}
 	
+	public Libretto votiUguali (int p) {
+		Libretto ris = new Libretto();
+		for(Voto v: this.voti) {
+			if(v.getVoto() == p) {
+				ris.add(v);
+			}
+		}
+		return ris;
+	}
+	
 	public String toString() {
 		String s = "";
 		for(Voto v:this.voti) {
